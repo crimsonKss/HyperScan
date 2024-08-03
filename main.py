@@ -94,7 +94,7 @@ async def scan(interaction: discord.Interaction, message: discord.Message):
 
             data_obj = DataObj()
             values = vars(data_obj).values()
-            join = '\n> '.join(map(str, values))
+            join = '\n>\n'.join(map(str, values))
 
             return (f"🌍 **Your Virus Scan Report:** \n\n{join}\n\n *Please note: The scan date is not the date you ran"
                     f" this command, it's the time the VirusTotal API most recently checked the website for viruses.*")
