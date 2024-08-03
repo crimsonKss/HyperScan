@@ -80,7 +80,7 @@ async def scan(interaction: discord.Interaction, message: discord.Message):
 
             results = f''
             if data['positives'] > 0:
-                results = f'⚠️ **This website is suspicious. Use the link below for more info**'
+                results = f'> ⚠️ **This website is suspicious. Use the link below for more info**'
             else:
                 results = f'> ✅ This site is clean and safe to use!'
 
@@ -94,7 +94,7 @@ async def scan(interaction: discord.Interaction, message: discord.Message):
 
             data_obj = DataObj()
             values = vars(data_obj).values()
-            join = '\n'.join(map(str, values))
+            join = '\n> '.join(map(str, values))
 
             return (f"🌍 **Your Virus Scan Report:** \n\n{join}\n\n *Please note: The scan date is not the date you ran"
                     f" this command, it's the time the VirusTotal API most recently checked the website for viruses.*")
